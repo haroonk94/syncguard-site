@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SyncGuard</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; }
+  h1 { font-size: 1.6rem; line-height: 1.25; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  a { color: #1a5fb4; }
+  nav { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #ddd; font-size: 0.95rem; }
+  nav a { margin-right: 1rem; }
+  ul { padding-left: 1.25rem; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="disconnect.html">Disconnect</a>
+  <a href="reconnect.html">Reconnect</a>
+</nav>
+
+<h1>SyncGuard</h1>
+
+<p>SyncGuard is a Shopify app that checks whether every Shopify order has a
+matching record in your accounting system, and emails you when one is missing.</p>
+
+<h2>How it works</h2>
+<ul>
+  <li>It reads your Shopify orders through the Shopify Admin API. From each order
+      it takes only four fields: the order number, the date the order was created,
+      the total amount, and the currency.</li>
+  <li>It deliberately requests no customer names, email addresses, phone numbers,
+      or addresses.</li>
+  <li>It reads invoices and sales receipts from the accounting system you connect.</li>
+  <li>It compares the Shopify orders against those invoices and sales receipts.</li>
+  <li>It emails you when a Shopify order has no matching accounting record.</li>
+</ul>
+
+<h2>What it does not do</h2>
+<ul>
+  <li>It never writes to your accounting system. It only reads.</li>
+  <li>It does not request or store customer contact details or addresses.</li>
+</ul>
+
+<h2>Data retention</h2>
+<p>SyncGuard stores only what is needed to perform the comparison, and deletes
+anything older than 90 days.</p>
+
+<h2>Who operates SyncGuard</h2>
+<p>SyncGuard is operated by Infraexcel Private Limited, Lahore, Pakistan.
+Contact: <a href="mailto:infraexcel@hotmail.com">infraexcel@hotmail.com</a>.</p>
+
+<footer>
+  &copy; Infraexcel Private Limited, Lahore, Pakistan.
+</footer>
+</body>
+</html>
