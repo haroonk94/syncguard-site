@@ -1,7 +1,7 @@
 # syncguard-site
 
 Static site for SyncGuard, a Shopify app operated by Infraexcel Private Limited,
-Lahore, Pakistan (infraexcel@hotmail.com).
+Lahore, Pakistan (hello@syncguard.co).
 
 Pages:
 
