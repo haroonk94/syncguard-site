@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SyncGuard</title>
+<script>
+  // The Shopify App Store listing link. Update this one line when the listing goes live.
+  const INSTALL_URL = "https://apps.shopify.com/";
+</script>
 <style>
   body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; }
   h1 { font-size: 1.6rem; line-height: 1.25; }
@@ -13,12 +17,13 @@
   nav a { margin-right: 1rem; }
   ul { padding-left: 1.25rem; }
   footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #666; }
+  .cta-button { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.2rem; background: #1a5fb4; color: #fff; text-decoration: none; border-radius: 4px; }
+  .cta-button:hover { background: #154a8f; }
 </style>
 </head>
 <body>
 <nav>
   <a href="index.html">Home</a>
-  <a href="audit.html">Audit</a>
   <a href="privacy.html">Privacy</a>
   <a href="terms.html">Terms</a>
   <a href="disconnect.html">Disconnect</a>
@@ -27,37 +32,31 @@
 
 <h1>SyncGuard</h1>
 
-<p>SyncGuard is a Shopify app that checks whether every Shopify order has a
-matching record in your accounting system, and emails you when one is missing.</p>
+<p>SyncGuard is a read only watchdog for Shopify stores that sync orders into
+QuickBooks Online. It checks every hour that each paid order placed in your
+store actually arrived in QuickBooks, and emails you the moment one is
+missing.</p>
 
-<h2>How it works</h2>
-<ul>
-  <li>It reads your Shopify orders through the Shopify Admin API. From each order
-      it takes only four fields: the order number, the date the order was created,
-      the total amount, and the currency.</li>
-  <li>It deliberately requests no customer names, email addresses, phone numbers,
-      or addresses.</li>
-  <li>It reads invoices and sales receipts from the accounting system you connect.</li>
-  <li>It compares the Shopify orders against those invoices and sales receipts.</li>
-  <li>It emails you when a Shopify order has no matching accounting record.</li>
-</ul>
+<p>SyncGuard never writes to QuickBooks and never changes anything in your
+Shopify store. It only reads the two systems and reports what it finds.</p>
 
-<h2>What it does not do</h2>
-<ul>
-  <li>It never writes to your accounting system. It only reads.</li>
-  <li>It does not request or store customer contact details or addresses.</li>
-</ul>
+<p>SyncGuard is for Shopify merchants who already use a sync app or
+integration to push their orders into QuickBooks Online, and who currently
+have no way of knowing when one of those orders silently fails to arrive.</p>
 
-<h2>Data retention</h2>
-<p>SyncGuard stores only what is needed to perform the comparison, and deletes
-anything older than 90 days.</p>
+<p>Getting started takes three steps. Install SyncGuard from the Shopify App
+Store, connect it to QuickBooks Online in one click, and set the email
+address you want alerts sent to. From there SyncGuard runs on its own,
+checking every hour, and there is also a Run check now button inside the app
+for an on demand check that covers today and yesterday.</p>
 
-<h2>Who operates SyncGuard</h2>
-<p>SyncGuard is operated by Infraexcel Private Limited, Lahore, Pakistan.
-Contact: <a href="mailto:hello@syncguard.co">hello@syncguard.co</a>.</p>
+<p><a id="install-cta" class="cta-button">Install SyncGuard</a></p>
+<script>document.getElementById("install-cta").href = INSTALL_URL;</script>
 
 <footer>
-  &copy; Infraexcel Private Limited, Lahore, Pakistan. &middot; <a href="audit.html">Order audit</a>
+  &copy; Infraexcel Private Limited, Lahore, Pakistan. &middot;
+  <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot;
+  <a href="mailto:hello@syncguard.co">hello@syncguard.co</a>
 </footer>
 </body>
 </html>
